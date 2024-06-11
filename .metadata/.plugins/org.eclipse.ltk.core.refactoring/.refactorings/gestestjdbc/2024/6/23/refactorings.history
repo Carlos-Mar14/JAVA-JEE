@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;gestestjdbc/src/main/webapp/formGestiEstu.html&apos; to &apos;index.html&apos;" description="Rename resource &apos;formGestiEstu.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/formGestiEstu.html" name="index.html" stamp="1717779074624" updateReferences="true"/>
+</session>

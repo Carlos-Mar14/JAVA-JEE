@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gestion Estudiantes</title>
+</head>
+<body>
+	<h1>Gestion de estudiantes</h1>
+	<form method="post" action="Controlador">
+		<table>
+			<tr>
+				<td align="right" width="20%">Id</td>
+			<td width="60%"><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
