@@ -6,6 +6,7 @@
 		<item value="apache-tomcat-10.1.19"/>
 	</list>
 	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/Users/FOAP/Documents/forms.war"/>
 		<item value="/Users/FOAP/Downloads/holamundo.war"/>
 	</list>
 </section>

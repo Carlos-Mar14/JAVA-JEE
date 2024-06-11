@@ -19,14 +19,7 @@
 	</section>
 	<section name="GitCommitMessageComponent">
 		<list key="/Users/FOAP/git/repository/.git">
-			<item value="false"/>
-			<item value="FOAP &lt;FOAP@172.28.0.53&gt;"/>
-			<item value="JEE"/>
-			<item value="FOAP &lt;FOAP@172.28.0.53&gt;"/>
-			<item value="0000000000000000000000000000000000000000"/>
-			<item value="0"/>
-			<item value="false"/>
-			<item value=""/>
+			<item value="empty"/>
 		</list>
 	</section>
 </section>
