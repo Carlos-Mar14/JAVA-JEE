@@ -7,10 +7,27 @@
 <body>
 	<h1>Alta Alumno</h1>
 	<form name="datos_alumnos" action="procesador" method="post">
-		<label for="nom">Nombree</label>
-		<input type="text" name="form_nom" required="required" size="50" id="nom">
+		<label for="nom">Nombre</label>
+		<input placeholder="Escribe tu nombre" type="text" name="form_nom" required="required" size="50" id="nom">
+		<br>
+		<p>¿Que turno prefieres?</p>
+		<input checked type="radio" name="turno" value="TM">Turno de Mañanas
+		<br>
+		<input type="radio" name="turno" value="TT">Turno de Tardes
+		<br>
+		<input type="radio" name="turno" value="TN">Turno de Noches
+		<br>
+		<input type="radio" name="turno" value="TS">Turno de 24h
+		<br>
+		<p>Experiencia profesional: </p>
+		<input checked type="checkbox" name="expe" value="Hosteleria">Hosteleria
+		<br>
+		<input type="checkbox" name="expe" value="Automocion">Automocion
+		<br>
+		<input type="checkbox" name="expe" value="Informatica">Informatica
 		<br>
 		<input type="submit" value="Alta">
+		
 	</form>
 		
 </body>

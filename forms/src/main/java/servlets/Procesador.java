@@ -31,12 +31,28 @@ public class Procesador extends HttpServlet {
 		//Con el requerimietno se captura el valor que el usuario a introducido
 		//Se captura mediante el nombre del campo "form_nom" que se le dio en el HTML al input del campo
 		//En el request se coje lo del cliente, del usuario
+		//Resultados se muestra por terminal
 		String nomParam = request.getParameter("form_nom");
 		System.out.println(nomParam);
 		
-		//response es para mostrar algo del backend al cliente 
+		
+		//Recoger los turnos del formulario:
+		String turnoParm= request.getParameter("turno");
+		
+		
+		
+		//Recoger la experiencia del formulario:
+		String[] expeParam= request.getParameterValues("expe");
+		
+		
+		//response es para mostrar algo del backend al cliente = Osea, se muestra mensaje en pantalla del cliente
 		PrintWriter out = response.getWriter();
-		out.write("Hola " + nomParam);
+		out.write("Hola " + nomParam + " Turno seleccionado: " + turnoParm);
+		out.write("\nExperiencia: ");
+		
+		for(String experiencia: expeParam) {
+			out.write("\n" + "->" + experiencia);
+		}
 		out.close();
 	}
 

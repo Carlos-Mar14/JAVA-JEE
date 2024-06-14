@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN"
+"http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport name="tercerInforme" pageWidth="595"
+	pageHeight="842" leftMargin="20" rightMargin="20" topMargin="20"
+	bottomMargin="20">
+	<parameter name="P_ID_CURSO" class="java.lang.String" />
+	<parameter name="LOGO_URL" class="java.lang.String" />
+	<parameter name="P_INSTITUCION" class="java.lang.String" />
+	<queryString><![CDATA[
+		SELECT c.id_curso AS ID_CURSO, c.nombre_curso AS NOMBRE_CURSO,
+		m.fecha_inicio AS FECHA, m.id_matricula AS MATRICULA, a.id_alumno AS
+		ID_ALUMNO, a.nombre_alumno AS NOMBRE_ALUMNO FROM Matriculas m INNER JOIN
+		Alumnos a ON m.id_alumno=a.id_alumno INNER JOIN Cursos c ON
+		c.id_curso=m.id_curso WHERE c.id_curso=$P{P_ID_CURSO}]]>
+	</queryString>
+	<field name="ID_CURSO" class="java.lang.String" />
+	<field name="NOMBRE_CURSO" class="java.lang.String" />
+	<field name="FECHA" class="java.util.Date" />
+	<field name="MATRICULA" class="java.lang.String" />
+	<field name="ID_ALUMNO" class="java.lang.String" />
+	<field name="NOMBRE_ALUMNO" class="java.lang.String" />
+	<background>
+		<band height="68">
+			<image>
+				<reportElement x="465" y="0" width="66" height="68" />
+				<imageExpression class="java.lang.String"><![CDATA[$P{LOGO_URL}]]></imageExpression>
+
+			</image>
+
+		</band>
+	</background>
+	<title>
+		<band height="70">
+			<textField>
+
+				<reportElement x="0" y="0" width="530" height="30" />
+
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="20" isBold="true" />
+
+				</textElement>
+				<textFieldExpression class="java.lang.String">
+<![CDATA[$P{P_INSTITUCION}]]>
+				</textFieldExpression>
+			</textField>
+			<staticText>
+
+				<reportElement x="0" y="20" width="530" height="30" />
+
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="15" isBold="true" />
+
+				</textElement>
+				<text><![CDATA[Relacion de matriculados]]></text>
+			</staticText>
+			<line direction="TopDown">
+				<reportElement x="0" y="49" width="530" height="0"
+					key="line" />
+				<graphicElement stretchType="NoStretch" />
+			</line>
+			<textField>
+				<reportElement x="0" y="50" width="250" height="20"
+
+					key="textField" />
+
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="10" />
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["CURSO:
+"+$F{ID_CURSO}+"/"+$F{NOMBRE_CURSO}]]></textFieldExpression>
+
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="260" y="50" width="270" height="20"
+					key="textField" />
+				<textElement textAlignment="Right">
+					<font pdfFontName="Helvetica-Bold" size="10" />
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{FECHA}]]></textFieldExpression>
+
+			</textField>
+
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35">
+			<staticText>
+				<reportElement x="0" y="15" width="530" height="20" />
+
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="10" isBold="true" />
+
+				</textElement>
+				<text><![CDATA[MATRICULA]]></text>
+			</staticText>
+			<staticText>
+
+				<reportElement x="90" y="15" width="530" height="20" />
+
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="10" isBold="true" />
+
+				</textElement>
+				<text><![CDATA[ID ALUMNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="15" width="530" height="20" />
+
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="10" isBold="true" />
+
+				</textElement>
+				<text><![CDATA[NOMBRE ALUMNO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15">
+			<textField>
+				<reportElement x="0" y="0" width="200" height="13" />
+				<textFieldExpression class="java.lang.String">
+<![CDATA[$F{MATRICULA}]]>
+				</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="200" height="13" />
+				<textFieldExpression class="java.lang.String">
+<![CDATA[$F{ID_ALUMNO}]]>
+				</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="200" height="13" />
+				<textFieldExpression class="java.lang.String">
+<![CDATA[$F{NOMBRE_ALUMNO}]]>
+				</textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

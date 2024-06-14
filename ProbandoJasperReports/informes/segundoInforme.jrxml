@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE jasperReport
+PUBLIC "-//JasperReports//DTD Report Design//EN"
+"http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport name="segundoInforme" pageWidth="595"
+	pageHeight="842" leftMargin="20" rightMargin="20" topMargin="20"
+	bottomMargin="20">
+	<parameter name="P_INSTITUCION" class="java.lang.String" />
+	<parameter name="P_CURSO_ANY" class="java.lang.String" />
+	<parameter name="P_CURSO_NOM" class="java.lang.String" />
+	<title>
+		<band height="50">
+			<textField>
+				<reportElement x="0" y="0" width="530" height="30" />
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="20" isBold="true" />
+				</textElement>
+				<textFieldExpression class="java.lang.String">
+<![CDATA[$P{P_INSTITUCION}]]>
+				</textFieldExpression>
+			</textField>
+			<line direction="TopDown">
+				<reportElement x="0" y="29" width="530" height="0" />
+			</line>
+			<textField isStretchWithOverflow="false"
+				isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"
+				hyperlinkTarget="Self">
+				<reportElement x="0" y="30" width="250" height="20" />
+				<textElement>
+					<font pdfFontName="Helvetica-Bold" size="10" />
+				</textElement>
+				<textFieldExpression class="java.lang.String">
+<![CDATA[$P{P_CURSO_ANY}]]>
+				</textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="false"
+				isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"
+				hyperlinkTarget="Self">
+				<reportElement x="260" y="30" width="270" height="20" />
+				<textElement textAlignment="Right">
+					<font pdfFontName="Helvetica-Bold" size="10" />
+				</textElement>
+				<textFieldExpression class="java.lang.String">
+<![CDATA[$P{P_CURSO_NOM}]]>
+				</textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="200">
+		</band>
+	</detail>
+</jasperReport>
