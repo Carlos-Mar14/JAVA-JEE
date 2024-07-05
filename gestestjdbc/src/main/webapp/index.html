@@ -1,29 +1,35 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Gestión de Estudiantes</title>
-<style>
-    body {
-        background-color: #800080; /* Color morado */
-    }
-</style>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>index.html</title>
+
 </head>
-<body>
-    <h1>Gestión de estudiantes</h1>
-    <form method="post" action="Controlador">
-        <table>
-            <tr>
-                <td>
-                    <input type="text" name="id" placeholder="Consulta SQL">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Enviar">
-                </td>
-            </tr>
-        </table>
-    </form>
+
+<body style="background-color: rgb(147, 73, 147); color: rgb(0, 0, 0);"
+	alink="#ee0000" link="#0000ee" vlink="#551a8b">
+<span style="color: white;"></span>
+<h2 style="text-align: center;"><span style="color: white;">Gestion
+de estudiantes</span></h2>
+<br>
+<form method="post"
+	action="http://localhost:8080/gestestjdbc/controlador?operacion=consulta" name="Principal">
+<input maxlength="100" size="50" name="txtSelect"
+	value="SELECT * FROM alumnos"> <br>
+<input name="btnEjecutar" value="Ejecutar" type="submit"><br>
+<br>
+</form>
+<form method="post"
+	action="http://localhost:8080/gestestjdbc/controlador?operacion=alta" name="Grabacion">
+<label style="color: white; font-weight: bold;">ID alumno</label><input
+	maxlength="4" size="4" name="txtID"><span
+	style="color: white; font-weight: bold;"> </span>&nbsp;&nbsp;&nbsp;&nbsp;<label
+	style="color: white; font-weight: bold;">Curso</label><input
+	name="txtCurso">&nbsp;&nbsp;&nbsp; <span
+	style="color: white; font-weight: bold;">Nombre</span><input
+	maxlength="35" size="35" name="txtNombre"><br>
+<input name="btnAlta" value="Alta alumno" type="submit"><br>
+<br>
+</form>
 </body>
 </html>

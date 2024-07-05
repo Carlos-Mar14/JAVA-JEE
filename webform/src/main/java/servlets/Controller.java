@@ -10,7 +10,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.Map;
 
 import data.JpaUtils;
 import data.UserDao;
@@ -46,6 +48,11 @@ public class Controller extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		Map<String, String[]> mapa = request.getParameterMap();
+		
+		String[] _empresa = mapa.get("empresa_form");
+		for(String emp: _empresa) System.out.println(emp);
+		
 		// Resposanbilidad Acá abajo
 		// Se encarga de recoger los datos del navegador
 		String login = request.getParameter("login_form");
