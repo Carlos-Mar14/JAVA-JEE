@@ -1,0 +1,70 @@
+
+Este proyecto NO es una evolución del anterior (ej02-ow-jpa-jstl). Se limita a usar lo mínimo 
+imprescindible para demostrar cómo usar API Rest en un projecto. Para ello se desprende de todo lo
+accesorio para este propósito. No hay capa de persistencia.
+
+Nuevas tecnologías que usa: 
+-En el HTML incluye BootStrap
+-JPA con la implementación de Hibernate y usa JSTL para las vistas.
+-Se muestra que las JSP deben estar en la parte privada de la web (WEB-INF)
+
+Proyecto maven que usa:
+-librerías: 
+	<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>3.0.0</version>
+	</dependency>
+
+	<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>3.0.1</version>
+	</dependency>
+		
+	<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-common</artifactId>
+			<version>3.1.2</version>
+	</dependency>
+
+	<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>3.1.2</version>
+	</dependency>
+
+	<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>3.1.2</version>
+	</dependency>
+
+	<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>3.1.2</version>
+	</dependency>
+
+-properties->project facets: dynamic web modules 6.0
+-properties->deployment assembly->maven dependencies
+
+Se inicia el fichero index.html, el cual mediate una etiqueta meta redirige el navegador a la URL: 
+
+http://localhost:8080/ej03-ow-api-rest/api/employees
+
+La idea es que las peticiones que empiecen por la cadena "api" sean gestionadas por el API Rest. 
+Por el contrario, las peticiones que no empiecen por la cadena "api" se podrían gestionar por 
+servlets tradicionales.
+
+La clase App es una subclase de jakarta.ws.rs.core.Application y nos sirve para usar la anotación
+@ApplicationPath y poder especificar la cadena ("api" en nuestro caso) que identifica las peticiones
+que serán gestionadas por el API Rest.
+
+La clase EmployeeResource es el API Rest propiamente. Se activa al detectar en la petición la cadena
+"api/employees". Si la petición es mediante el método GET hacemos que se ejecute el método findAll(). 
+Todo esto es gracias al uso de las anotaciones de Jersey. A destacar que hemos especificado que los
+métodos de esta clase consumen y producen formato JSON.
+
+Un buen ejercicio a partir de aquí sería realizar un CRUD completo con esta clase.
+

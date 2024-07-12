@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Gestion de estudiantes</title>
+	<style>
+		body { color: rgb(0, 0, 0);	background-color: rgb(147, 73, 147); }		
+		a:link { color: #ee0000; }		
+		a:hover { color: #0000ee; }
+		a:visited { color: #551a8b }
+		h2 { color: white; text-align: center; }		
+		label { color: white; font-weight: bold; }
+	</style>
+</head>
+<body>	
+	<h2>Gestion de estudiantes</h2><br>	
+	<form method="post"	action="consulta.go">
+		<input size="50" name="txtSelect" value="SELECT * FROM alumnos"><br><br>
+		<input name="btnEjecutar" value="Ejecutar" type="submit"><br>
+	</form>
+	<br>
+	<form method="post"	action="alta.go">		
+		<label>ID alumno&nbsp;<input maxlength="4" size="4" name="txtID"></label>		
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<label>Curso&nbsp;<input name="txtCurso"></label>
+		&nbsp;&nbsp;&nbsp;
+		
+		<label>Nombre&nbsp;<input size="35" name="txtNombre"></label><br><br>
+		<input name="btnAlta" value="Alta alumno" type="submit">
+	</form>
+</body>
+</html>

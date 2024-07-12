@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  
+  <display-name>articulos-servlets</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>inicio.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>AutenticacionServlet</display-name>
+    <servlet-name>AutenticacionServlet</servlet-name>
+    <servlet-class>servlet.AutenticacionServlet</servlet-class>
+    <init-param>
+      <description>Ruta de ficheros de password</description>
+      <param-name>ficheroUsuarios</param-name>   
+      <param-value>/WEB-INF/ficheroUsuarios.prop</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AutenticacionServlet</servlet-name>
+    <url-pattern>/AutenticacionServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+
+  <servlet>  
+    <description></description>
+    <display-name>AddArticuloServlet</display-name>
+    <servlet-name>AddArticuloServlet</servlet-name>
+    <servlet-class>servlet.AddArticuloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddArticuloServlet</servlet-name>
+    <url-pattern>/AddArticuloServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>ListarArticulosServlet</display-name>
+    <servlet-name>ListarArticulosServlet</servlet-name>
+    <servlet-class>servlet.ListarArticulosServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarArticulosServlet</servlet-name>
+    <url-pattern>/ListarArticulosServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

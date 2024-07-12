@@ -2,19 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Antisocial Club</title>
+<title>Ejemplo uso cookies</title>
 </head>
 <body>
 	<h1>Antisocial Club Red</h1>
-	<h2>Area Pública</h2>
-	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-		eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-		minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-		aliquip ex ea commodo consequat. Duis aute irure dolor in
-		reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-		pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-		culpa qui officia deserunt mollit anim id est laborum."</p>
-		
-		
+	
+	<!--se usa name en los input para recuperar dichos valores en el servidor y poder manejarlos allì  -->
+	<form method="get" action="CookieServlet"> 
+		Cookie: <input name="cookie"><br> 
+		Valor: <input name="valor"><br> 
+		Duración: <input name="duracion"><br>
+		<button>Añadir cookie</button>
+	</form>
 </body>
 </html>

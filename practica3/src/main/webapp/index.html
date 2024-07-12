@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Gestion de estudiantes</title>
+	<style>
+		body { color: rgb(0, 0, 0);	background-color: rgb(147, 73, 147); }		
+		a:link { color: #ee0000; }		
+		a:hover { color: #0000ee; }
+		a:visited { color: #551a8b }
+		h2 { color: white; text-align: center; }		
+		label { color: white; font-weight: bold; }		
+		legend { color: white; }
+		.radio { color: white; }
+	</style>
+</head>
+<body>	
+	<h2>Gestion de estudiantes</h2><br>	
+	<form method="post"	action="consulta.go">
+		<fieldset>
+		<legend>Consultas</legend>
+		<input size="50" name="txtSelect" value="SELECT * FROM alumnos"><br><br>
+		<input name="btnEjecutar" value="Ejecutar" type="submit"><br>
+		</fieldset>
+	</form>
+	<br>
+	<form method="post"	action="alta.go">
+		<fieldset>
+		<legend>Altas</legend>		
+		<label>ID alumno&nbsp;<input maxlength="4" size="4" name="txtID"></label>		
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<label>Curso&nbsp;<input name="txtCurso"></label>
+		&nbsp;&nbsp;&nbsp;
+		
+		<label>Nombre&nbsp;<input size="35" name="txtNombre"></label><br><br>
+		<input name="btnAlta" value="Alta alumno" type="submit">
+		</fieldset>
+	</form>
+	
+	<form method="post" action="informe.go">
+		<fieldset>
+		<legend>Informes</legend>
+		<input name="optInformes" value="application/pdf" type="radio" checked>
+			<span class="radio">PDF</span>
+		<input name="optInformes" value="application/vnd.ms-excel" type="radio">
+			<span class="radio">Excel</span>
+		<input name="optInformes" value="application/msword" type="radio">
+			<span class="radio">Word</span>
+		<input name="optInformes" value="text/html" type="radio">
+			<span class="radio">HTML</span>
+		<br><br>
+		<input value="Ver informe" type="submit">
+		</fieldset>
+	</form>
+</body>
+</html>
