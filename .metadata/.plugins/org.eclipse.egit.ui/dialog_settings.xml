@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="CommitDialog.authorValues">
+		<item value="FOAP &lt;FOAP@10.30.203.110&gt;"/>
 		<item value="FOAP &lt;FOAP@172.28.0.62&gt;"/>
 		<item value="FOAP &lt;FOAP@172.28.0.57&gt;"/>
 		<item value="FOAP &lt;FOAP@172.28.0.64&gt;"/>
@@ -9,6 +10,7 @@
 		<item value="FOAP &lt;FOAP@172.28.0.53&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="FOAP &lt;FOAP@10.30.203.110&gt;"/>
 		<item value="FOAP &lt;FOAP@172.28.0.62&gt;"/>
 		<item value="FOAP &lt;FOAP@172.28.0.57&gt;"/>
 		<item value="FOAP &lt;FOAP@172.28.0.64&gt;"/>
