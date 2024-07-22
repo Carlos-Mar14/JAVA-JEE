@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.1 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v10.1 Server at localhost" name="Tomcat v10.1 Server at localhost" runtime-id="apache-tomcat-10.1.19" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="24">
-    <list key="modules" value0="Cookies::org.eclipse.jst.jee.server:Cookies::jst.web::6.0" value1="practica2::org.eclipse.jst.jee.server:practica2::jst.web::6.0" value2="gestestjdbc::org.eclipse.jst.jee.server:gestestjdbc::jst.web::6.0" value3="practica3::org.eclipse.jst.jee.server:practica3::jst.web::6.0" value4="ej03-ow-api-rest::org.eclipse.jst.jee.server:ej03-ow-api-rest::jst.web::6.0" value5="img-web::org.eclipse.jst.jee.server:img-web::jst.web::6.0" value6="articulos-servlets::org.eclipse.jst.jee.server:articulos-servlets::jst.web::6.0" value7="first-Jsp::org.eclipse.jst.jee.server:first-Jsp::jst.web::6.0"/>
-  </server>
-</servers>
+<servers/>
