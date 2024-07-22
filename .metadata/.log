@@ -5054,3 +5054,20 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 !MESSAGE Save operation warnings.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2024-07-22 15:53:29.046
 !MESSAGE The project description file (.project) for 'Servers' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.egit.core 4 0 2024-07-22 18:15:55.090
+!MESSAGE An exception occurred during push on URI https://github.com/Carlos-Mar14/JAVA-JEE.git: https://github.com/Carlos-Mar14/JAVA-JEE.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/Carlos-Mar14/JAVA-JEE.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:695)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:637)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1557)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-07-22 18:15:55.099
+!MESSAGE Can't connect to any repository: https://github.com/Carlos-Mar14/JAVA-JEE.git (https://github.com/Carlos-Mar14/JAVA-JEE.git: not authorized)
