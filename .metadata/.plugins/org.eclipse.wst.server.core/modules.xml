@@ -12,7 +12,7 @@
   <module moduleId="org.eclipse.jst.jee.server:practica3" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:practica2" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:holamundo" serverId="Tomcat v10.1 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:gestestjdbc" serverId="Tomcat v10.1 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:gestestjdbc" serverId="apache-tomcat-10.1.19 at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:forms" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Cookies" serverId="Tomcat v10.1 Server at localhost"/>
 </modules>
